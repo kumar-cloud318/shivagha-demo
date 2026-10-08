@@ -1,15 +1,19 @@
-name: MyFirst Workflow
+name: Conditional Workflow
 
 on:
     push:
-        branches: [main, feature]
-    pull_request:
-        branches: [main]
-    workflow_dispatch:
+        branches: ["*"]
 
 jobs:
-  myfirstjob:
+  run-always:
     runs-on: ubuntu-24.04
     steps:
         - name: Print my name
-          run: echo "hello, Am Avinash and Am learning GHA"
+          run: echo "This job is running always"
+
+  only-on-main:
+    runs-on: ubuntu-24.04
+  
+    steps:
+        - name: Print my name
+          run: echo "This job is running only on main branch"
