@@ -1,0 +1,25 @@
+name: 09 - AWS Access using OIDC
+
+on:
+    push:
+        branches: ["*"]
+    workflow_dispatch:
+
+permissions:
+    id-token: write
+    contents: read
+
+jobs:
+    List-buckets:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Configure AWS Credentials
+              uses: aws-actions/configure-aws-credentials@v6.3.0
+              with:
+                aws-region:  ${{ vars.AWS_REGION }}
+                role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+            - name: use OIDC and List buckets
+              run: |
+                aws s3 ls
+                aws s3 ls s3://suman-bkt-gha
+                aws s3 mb s3://shiva.gha.create.test.oidc
