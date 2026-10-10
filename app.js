@@ -1,4 +1,4 @@
-/ AWAR Batch 10 - GitHub Actions Demo
+// AWAR Batch 10 - GitHub Actions Demo
 
 console.log("==============================================");
 console.log("   AWS with DevOps - Batch 10");
