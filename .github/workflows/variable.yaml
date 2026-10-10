@@ -11,7 +11,7 @@ jobs:
         env:                            #Job level variable
             COURSE: GitHubActions
         steps:
-            - name: Print the local file variables
+            - name: Print all of the local file variables
               env:
                 GREETING: Hello
               run: echo "$GREETING, Am learning- $COURSE and My Name is $NAME"
