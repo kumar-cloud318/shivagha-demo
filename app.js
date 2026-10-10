@@ -8,7 +8,7 @@ console.log("==============================================");
 console.log("Node.js application is running...");
 
 const name = "Aviz Academy";
-const batch = "AWAR-10-Batch";
+const batch = "AWAR-10-BatchSuman";
 
 console.log(`Training Platform : ${name}`);
 console.log(`Batch             : ${batch}`);
