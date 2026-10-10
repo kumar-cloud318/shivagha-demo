@@ -17,4 +17,4 @@ jobs:
                 aws s3 ls
                 aws s3 ls s3://suman-bkt-gha
                 aws s3 ls s3://shiva-bkt-gha
-                aws s3 mb s3://chotu-bkt-gha
+                aws s3 ls s3://chotu-bkt-gha
