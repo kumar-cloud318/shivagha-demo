@@ -23,5 +23,5 @@ jobs:
                 context: .
                 file: true
                 tags: 
-                    ${{ secrets.DOCKER_USER }}/shivagha-demo:latest
+                    ${{ secrets.DOCKERHUB_USER }}/shivagha-demo:latest
                     ${{ secrets.DOCKERHUB_USER }}/shivagha-demo:${{ github.run_id  }}
